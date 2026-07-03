@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Custom Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0A0A0A;
+}
+::-webkit-scrollbar-thumb {
+  background: #232323;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #FF3B30;
+}
+
+/* Custom tabular alignment utility */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Smooth transitions for theme changes */
+*, *::before, *::after {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+/* Dark mode overrides */
+.dark {
+  /* Override main layout and backgrounds */
+  .bg-\[\#EAE7E4\] {
+    background-color: #1a1a1a !important;
+  }
+  
+  /* Cards & standard white backgrounds */
+  .bg-white {
+    background-color: #242424 !important;
+  }
+  .bg-white\/90 {
+    background-color: rgba(36, 36, 36, 0.9) !important;
+  }
+  .bg-\[\#F4F2F0\] {
+    background-color: #2a2a2a !important;
+  }
+  .bg-neutral-50 {
+    background-color: #282828 !important;
+  }
+  .bg-\[\#F9FAFB\] {
+    background-color: #222222 !important;
+  }
+  
+  /* Fonts, Headings, Texts */
+  .text-neutral-900,
+  .text-neutral-800,
+  .text-neutral-700,
+  .text-neutral-600,
+  .text-black,
+  .text-\[\#141414\] {
+    color: #f4f4f5 !important;
+  }
+  
+  /* Muted elements */
+  .text-neutral-500,
+  .text-neutral-400 {
+    color: #a1a1aa !important;
+  }
+  
+  /* Borders */
+  .border-\[\#E2E1DE\],
+  .border-\[\#E5E7EB\],
+  .border-neutral-200,
+  .border-neutral-100 {
+    border-color: #333333 !important;
+  }
+  
+  /* Input controls */
+  input, select, textarea {
+    background-color: #2a2a2a !important;
+    color: #f4f4f5 !important;
+    border-color: #404040 !important;
+  }
+  input::placeholder, textarea::placeholder {
+    color: #71717a !important;
+  }
+  input:focus, select:focus, textarea:focus {
+    border-color: #FF3B30 !important;
+  }
+  
+  /* Hover modifications */
+  .hover\:bg-neutral-50:hover {
+    background-color: #2c2c2c !important;
+  }
+  .hover\:bg-neutral-100:hover {
+    background-color: #333333 !important;
+  }
+  .hover\:border-neutral-300:hover {
+    border-color: #555555 !important;
+  }
+  
+  /* Chart adjustments */
+  .recharts-cartesian-grid line {
+    stroke: #333333 !important;
+  }
+  .recharts-default-tooltip {
+    background-color: #242424 !important;
+    border: 1px solid #404040 !important;
+    color: #f4f4f5 !important;
+  }
+  .recharts-tooltip-item {
+    color: #f4f4f5 !important;
+  }
+}
